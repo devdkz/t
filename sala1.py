@@ -11,8 +11,6 @@ fuso_horario_sp = pytz.timezone('America/Sao_Paulo')
 class Bot:
     def __init__(self):
         self.url_api = 'http://144.217.215.53:9923/api/treze/v2'
-        self.message_gale = None
-
         # CHAT ID E TOKEN DO BOT
         self.chat_id = '-1002014635868'
         self.token = '6034798397:AAHeLTHjFAULracJz8NbKVeHsovrdlDIdcQ'
