@@ -19,7 +19,7 @@ class Bot:
         self.bot = telebot.TeleBot(token=self.token, parse_mode='MARKDOWN', disable_web_page_preview=True)
         self.wins = 0
         self.loss = 0
-        self.link = ''
+        self.link = 'https://www.youtube.com/'
         self.verdes = 0
         self.count = 0
         #MARTINGALES 👇
@@ -269,8 +269,8 @@ class Bot:
             cor = 'VERMELHO 🔴'
             self.send_alert(cor, strategy)
         
-        if numeros[3] == '14':
-            strategy = 'Numero 3'
+        if numeros[3] == '6':
+            strategy = 'Numero 5'
             self.direction_color = ['V']
             cor = 'VERMELHO 🔴'
             if self.analisar:
