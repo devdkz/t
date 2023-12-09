@@ -46,10 +46,16 @@ class Bot:
         self.check_date = self.date_now
     def button_link(self):
         markup = InlineKeyboardMarkup()
-        markup.row_width = 2
-        markup.add(InlineKeyboardButton(text=('🕹️CADASTRE-SE AQUI'),
-                                    url=(self.link)))
+        markup.row_width = 1  # Definir a largura da linha conforme necessário
+
+        button_text = '🕹️CADASTRE-SE AQUI'  # Texto do botão
+        button_url = self.link  # URL para redirecionamento
+
+    # Criar e adicionar o botão ao teclado inline
+        markup.add(InlineKeyboardButton(text=button_text, url=button_url))
+
         return markup
+
     def restart(self):
         if self.date_now != self.check_date:
             print("Reiniciando bot!")
