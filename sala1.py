@@ -11,6 +11,8 @@ fuso_horario_sp = pytz.timezone('America/Sao_Paulo')
 class Bot:
     def __init__(self):
         self.url_api = 'http://144.217.215.53:9923/api/treze/v2'
+        self.message_gale = None
+
         # CHAT ID E TOKEN DO BOT
         self.chat_id = '-1002014635868'
         self.token = '6034798397:AAHeLTHjFAULracJz8NbKVeHsovrdlDIdcQ'
@@ -144,6 +146,7 @@ class Bot:
     #DEF GREEN RESULT
     def green_resu(self):
         print('GREEN')
+        self.count = 0
         hora_atual_sp = datetime.now(fuso_horario_sp)
         self.list_houra.append({'STATUS': '✅GREEN', 'HORARIO' : hora_atual_sp.strftime('%H:%M')})
         self.max_hate += 1
@@ -168,6 +171,7 @@ class Bot:
         self.max_hate += 1
         self.wins += 1
         self.count_parcial += 1
+        self.count = 0
         self.verdes += 1
         hora_atual_sp = datetime.now(fuso_horario_sp)
         self.list_houra.append({'STATUS': '✅GREEN NO 13', 'HORARIO' : hora_atual_sp.strftime('%H:%M')})
@@ -187,6 +191,7 @@ class Bot:
         print('LOSSS')
         self.max_hate = 0
         self.analisar = True
+        self.count = 0
         self.count_parcial += 1
         hora_atual_sp = datetime.now(fuso_horario_sp)
         self.list_houra.append({'STATUS': '🔴LOSS', 'HORARIO' : hora_atual_sp.strftime('%H:%M')})
